@@ -1,7 +1,7 @@
 
 import React from "react";
 import {axiosWithAuth} from '../utils/axiosWithAuth';
-import {Form, Button} from "semantic-ui-react";
+import {Form, Button, Grid, Header} from "semantic-ui-react";
 
 
 
@@ -39,15 +39,21 @@ class RegForm extends React.Component {
   render() {
     return (
         <div>
-        <h1>Create an Account </h1>
-        <Form onSubmit={this.register}>
-         <input type="email" name="email" placeholder="Email" />
-         <input type="password" name="passwordcreate" placeholder="Password" />
-         <input type="password" name="confirmpassword" placeholder="Confirm Password" />
-        <Button>Submit</Button>
+ <Grid textAlign='center' style={{ height: '100vh' }} verticalAlign='middle'>
+ <Grid.Column style={{ maxWidth: 450 }}>
+ <Header as='h2' color='teal' textAlign='center'>
+     Create an Account
+     </Header>
+        <Form size='large' onSubmit={this.register}>
+         < Form.Input fluid type="email" name="email" placeholder="Email" />
+         <Form.Input type="password" name="passwordcreate" placeholder="Password" />
+         <Form.Input type="password" name="confirmpassword" placeholder="Confirm Password" />
+         <Button color='teal' fluid size='large'>Submit</Button>
         </Form>
+        </Grid.Column>
+  </Grid>
         </div>
-        
+
         );
   }
 };
