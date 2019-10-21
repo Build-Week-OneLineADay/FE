@@ -1,0 +1,4 @@
+[build]
+    base = "onelineaday-client/"
+    publish = "onelineaday-client/public/"
+    command = "echo 'default context'"
