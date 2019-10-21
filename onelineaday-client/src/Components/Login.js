@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import ReactDOM from "react-dom";
 import {
   BrowserRouter as Router,
@@ -6,8 +6,9 @@ import {
   Route,
   useParams
 } from "react-router-dom";
-import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
+// import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
 import "./Login.css";
+import {Form, Button} from "semantic-ui-react";
 
 export default function Login(props) {
   const [email, setEmail] = useState("");
@@ -24,25 +25,25 @@ export default function Login(props) {
   return (
     <div className="Login">
       <form onSubmit={handleSubmit}>
-        <FormGroup controlId="email" bsSize="large">
-          <ControlLabel>Email</ControlLabel>
-          <FormControl
+        <Form controlId="email" bsSize="large">
+          {/* <ControlLabel>Email</ControlLabel> */}
+          <Form
             autoFocus
             type="email"
             placeholder="Enter Your Email Here"
             value={email}
             onChange={e => setEmail(e.target.value)}
           />
-        </FormGroup>
-        <FormGroup controlId="password" bsSize="large">
-          <ControlLabel>Password</ControlLabel>
-          <FormControl
+        </Form>
+        <Form controlId="password" bsSize="large">
+          {/* <ControlLabel>Password</ControlLabel> */}
+          <Form
             value={password}
             placeholder="Enter Your Password"
             onChange={e => setPassword(e.target.value)}
             type="password"
           />
-        </FormGroup>
+        </Form>
         <Button block bsSize="large" disabled={!validateForm()} type="submit">
           Login
         </Button>
