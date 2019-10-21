@@ -1,4 +1,4 @@
 [build]
-    base = "onelineaday-client/"
-    publish = "onelineaday-client/build/"
+    base = "onelineaday-client"
+    publish = "onelineaday-client/build"
     command = "yarn build"
