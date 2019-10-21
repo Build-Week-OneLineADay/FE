@@ -5,8 +5,6 @@ import {Form, Button} from "semantic-ui-react";
 
 
 
-
-
 class RegForm extends React.Component {
     state = {
       credentials: {
@@ -41,7 +39,7 @@ class RegForm extends React.Component {
   render() {
     return (
         <div>
-        <h1>Create a Profile </h1>
+        <h1>Create an Account </h1>
         <Form onSubmit={this.register}>
          <input type="email" name="email" placeholder="Email" />
          <input type="password" name="passwordcreate" placeholder="Password" />
