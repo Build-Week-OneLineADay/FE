@@ -1,4 +1,4 @@
 [build]
     base = "onelineaday-client/"
     publish = "public/"
-    command = "echo 'default context'"
+    command = "yarn build"
