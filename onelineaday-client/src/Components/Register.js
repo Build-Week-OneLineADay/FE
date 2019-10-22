@@ -1,9 +1,17 @@
 
 import React from "react";
-import {axiosWithAuth} from '../utils/axiosWithAuth';
+import axiosWithAuth  from '../utils/axiosWithAuth';
 import {Form, Button, Grid, Header} from "semantic-ui-react";
+import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 
+export const Underlined = styled.span`
+	text-decoration: underline
+`	
 
+export const P = styled.p`
+	margin: 1rem 0;
+`
 
 class RegForm extends React.Component {
     state = {
@@ -50,6 +58,9 @@ class RegForm extends React.Component {
          <Form.Input type="password" name="confirmpassword" placeholder="Confirm Password" />
          <Button color='teal' fluid size='large'>Submit</Button>
         </Form>
+        <P>
+  				<strong>Already a member?</strong> <Link to="/"><Underlined>Login</Underlined></Link>
+  			</P>
         </Grid.Column>
   </Grid>
         </div>

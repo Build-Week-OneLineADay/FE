@@ -1,22 +1,153 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
+a {
+  color: #00b5ad;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+a:hover {
+  color: #00b5ad;
+}
+
+a.signOutButton {
   color: white;
+}
+
+.SubTitle {
+  font-family: 'Source Sans Pro', sans-serif;
+  width: 100%;
+  text-align: center;
+  letter-spacing: 0.2rem;
+  padding: 40px 40px 0;
+  color: #00b5ad;
 }
 
 .App-link {
   color: #09d3ac;
+}
+
+.main-content {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px 40px;
+  opacity: 0.9;
+}
+
+.logout-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 550px;
+}
+
+.logout-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 550px;
+}
+
+.navbar {
+  align-items: center;
+  margin-bottom: 80px;
+  border-bottom: 1px solid rgb(221, 221, 221);
+  display: flex;
+  height: 70px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 3%;
+  -webkit-box-shadow: 0px 2px 15px -8px rgba(0, 0, 0, 0.42);
+  -moz-box-shadow: 0px 2px 15px -8px rgba(0, 0, 0, 0.42);
+  box-shadow: 0px 2px 15px -8px rgba(0, 0, 0, 0.42);
+}
+
+.dark-mode__toggle {
+  background: white;
+  border-radius: 50px;
+  border: 1px solid black;
+  height: 20px;
+  position: relative;
+  width: 40px;
+}
+
+.toggle {
+  background: black;
+  border-radius: 50px;
+  height: 18px;
+  left: 0;
+  position: absolute;
+  transition: 0.2s;
+  width: 20px;
+}
+
+.toggled {
+  left: 18px;
+}
+
+.dark-mode {
+  color: #fff;
+  background-color: #313843;
+}
+
+.dark-mode.navbar {
+  background-color: #1F2022;
+  border: none;
+}
+
+.LinkWrapper{
+  padding-bottom: 20px;
+}
+
+.div.header {
+  color: white;
+}
+
+button {
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin: 10px;
+  transition: 600ms;
+  border: 1px solid teal;
+}
+
+.ui.card {
+  margin: 20px;
+  width: 350px;
+  text-align: left;
+  height: 100%;
+  transition: 600ms;  
+}
+
+.ui.card:hover {
+  transform: scale(1.1);
+  transition: 600ms;
+  cursor: pointer;
+}
+
+.LinkWrapper{
+  padding-bottom: 20px;
+}
+
+.entry-span{
+  display: flex;
+  flex-direction: column;
+}
+
+.entry-date {
+  margin: 0px 20px 0;
+  border: 1px solid #7f7f7f4d;
+}
+
+.entry-button {
+  margin: 5px 20px 0;
+  color:white;
+  background-color: #256cc3cb;
+  font-size: 1.2rem;
 }
