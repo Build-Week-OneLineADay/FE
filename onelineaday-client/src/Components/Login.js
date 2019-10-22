@@ -24,12 +24,12 @@ export default function Login(props) {
         <Header as='h2' color='teal' textAlign='center'>
      Get Logged In
         </Header>
-      <form onSubmit={handleSubmit}>
+      <Form onSubmit={handleSubmit}>
         <Form controlId="email" bsSize="large">
 
           <h2>Email</h2>
 
-          <Form
+          <Form.Input
             autoFocus
             type="email"
             placeholder="Enter Your Email Here"
@@ -41,7 +41,7 @@ export default function Login(props) {
 
           <h2>Password</h2>
 
-          <Form
+          <Form.Input
             value={password}
             placeholder="Enter Your Password"
             onChange={e => setPassword(e.target.value)}
@@ -53,7 +53,7 @@ export default function Login(props) {
 
           Login
         </Button>
-      </form>
+      </Form>
       </Grid.Column>
     </Grid>
     </div>
