@@ -12,10 +12,14 @@ function Dashboard () {
 }, []);
 
 function loadPosts() {
+
+  const id = localStorage.getItem('user_id');
+
+
   axiosWithAuth()
-        .get('/api/journal/posts')
+        .get(`/api/journal/users/${id}/posts`)
         .then (res => {
-            setPosts(res.data.posts)
+            setPosts(res.data)
         })
     .catch(err => {
         console.log(err)

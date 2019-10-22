@@ -26,7 +26,7 @@ function handleChanges(e) {
     finalEntry.text_entry = entry.entry;
     
        axiosWithAuth()
-       .post('/api/journal/users/' + id + '/posts', finalEntry)
+       .post(`/api/journal/users/${id}/posts`, finalEntry)
        .then(res => {
            setEntry(res.data.posts);
            props.loadPosts();
