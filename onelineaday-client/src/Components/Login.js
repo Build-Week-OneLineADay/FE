@@ -29,6 +29,7 @@ export default function Login(props) {
       .post('/api/auth/login', auth)
       .then(res => {
         localStorage.setItem('token', res.data.token);
+        localStorage.setItem('user_id', res.data.user.id);
         props.history.push('/dashboard');
       })
       .catch(err => console.log("Please try again", err.response));
