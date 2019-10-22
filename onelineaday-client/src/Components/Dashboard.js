@@ -1,6 +1,6 @@
 import React, { useState, useEffect }from 'react';
 import NavBar from '../Components/NavBar';
-import EntryCard from './EntryCard';
+import EntryCard from './entryCard';
 import axiosWithAuth from '../utils/axiosWithAuth';
 
 function Dashboard () {

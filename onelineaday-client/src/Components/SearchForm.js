@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import EntryCard from './EntryCard';
+import EntryCard from './entryCard';
 import Axios from "axios";
 import { Search } from 'semantic-ui-react'
 
