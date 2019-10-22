@@ -7,4 +7,13 @@
       margin: 0 auto;
       max-width: 320px;
     }
+
+    .EditEntry {
+      padding: 60px 0;
+    }
+
+    .EditEntry form {
+      margin: 0 auto;
+      max-width: 320px;
+    }
   }
