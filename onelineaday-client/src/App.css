@@ -43,13 +43,7 @@ a.signOutButton {
 .logout-container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  width: 550px;
-}
-
-.logout-container {
-  display: flex;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: space-between;
   width: 550px;
 }
@@ -59,6 +53,7 @@ a.signOutButton {
   margin-bottom: 80px;
   border-bottom: 1px solid rgb(221, 221, 221);
   display: flex;
+  flex-wrap: wrap;
   height: 70px;
   align-items: center;
   justify-content: space-between;
@@ -71,14 +66,14 @@ a.signOutButton {
 .dark-mode__toggle {
   background: white;
   border-radius: 50px;
-  border: 1px solid black;
+  border: 1px solid #313843;
   height: 20px;
   position: relative;
   width: 40px;
 }
 
 .toggle {
-  background: black;
+  background: #313843;
   border-radius: 50px;
   height: 18px;
   left: 0;
@@ -150,4 +145,26 @@ button {
   color:white;
   background-color: #256cc3cb;
   font-size: 1.2rem;
+}
+
+.search {
+  width: 260px;
+  border-radius: 10px;
+  padding: 10px;
+  border: none;
+  height: 100%;
+}
+
+.search-div {
+  display: flex;
+  align-items: center;
+  border: 1px solid #00b5ad;
+  border-radius: 10px;
+  height: 26px;
+  overflow: hidden;
+}
+
+.search-img {
+  width: 20px;
+  height: 15px;
 }
