@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import axiosWithAuth from '../utils/axiosWithAuth'
 import {Form, Button, Grid, Header} from "semantic-ui-react";
 
+
 export const Underlined = styled.span`
 	text-decoration: underline
 `	
@@ -40,19 +41,23 @@ export default function Login(props) {
   			<Form onSubmit={onSubmit}>
   				<Form.Input
             name="email" 
+
             type="email"
             placeholder="Email"
             value={auth.email}
             onChange={handleChanges} 
           />
+
   				
   				<Form.Input
             name="password" 
+
             type="password"
             placeholder="Password"
             value={auth.password}
             onChange={handleChanges} 
           />
+
   				<Button color='teal' fluid size='large' type="submit">Login</Button>
   			</Form>
   
@@ -63,3 +68,4 @@ export default function Login(props) {
 		</Grid>
 	)
 }
+
