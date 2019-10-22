@@ -16,9 +16,10 @@ export const P = styled.p`
 class RegForm extends React.Component {
     state = {
       credentials: {
+        first_name: '',
+        last_name: '',
         email: '',
-        password: '',
-        confirmpassword: ''
+        password: ''
       }
     };
   
@@ -31,7 +32,6 @@ class RegForm extends React.Component {
         });
       };
     
-
       register = (e) => {
         e.preventDefault();
         axiosWithAuth()
@@ -53,9 +53,10 @@ class RegForm extends React.Component {
      Create an Account
      </Header>
         <Form size='large' onSubmit={this.register}>
-         < Form.Input fluid type="email" name="email" placeholder="Email" />
-         <Form.Input type="password" name="passwordcreate" placeholder="Password" />
-         <Form.Input type="password" name="confirmpassword" placeholder="Confirm Password" />
+        <Form.Input fluid type="text" name="first_name" placeholder="First Name" onChange={this.handleChange}  />
+        <Form.Input fluid type="text" name="last_name" placeholder="Last Name" onChange={this.handleChange}  />
+         <Form.Input fluid type="email" name="email" placeholder="Email" onChange={this.handleChange}  />
+         <Form.Input type="password" name="password" placeholder="Password" onChange={this.handleChange} />
          <Button color='teal' fluid size='large'>Submit</Button>
         </Form>
         <P>
