@@ -1,12 +1,5 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  useParams
-} from "react-router-dom";
-import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
+import React, { useState } from "react";
+import {Form, Button, Grid, Header} from "semantic-ui-react";
 import "./Login.css";
 
 export default function Login(props) {
@@ -23,30 +16,37 @@ export default function Login(props) {
 
   return (
     <div className="Login">
+        <Grid textAlign='center' style={{ height: '100vh' }} verticalAlign='middle'>
+        <Grid.Column style={{ maxWidth: 450 }}>
+        <Header as='h2' color='teal' textAlign='center'>
+     Get Logged In
+        </Header>
       <form onSubmit={handleSubmit}>
-        <FormGroup controlId="email" bsSize="large">
-          <ControlLabel>Email</ControlLabel>
-          <FormControl
+        <Form controlId="email" bsSize="large">
+          <Label>Email</Label>
+          <Form
             autoFocus
             type="email"
             placeholder="Enter Your Email Here"
             value={email}
             onChange={e => setEmail(e.target.value)}
           />
-        </FormGroup>
-        <FormGroup controlId="password" bsSize="large">
-          <ControlLabel>Password</ControlLabel>
-          <FormControl
+        </Form>
+        <Form controlId="password" bsSize="large">
+          <Label>Password</Label>
+          <Form
             value={password}
             placeholder="Enter Your Password"
             onChange={e => setPassword(e.target.value)}
             type="password"
           />
-        </FormGroup>
-        <Button block bsSize="large" disabled={!validateForm()} type="submit">
+        </Form>
+        <Button color="teal" block bsSize="large" disabled={!validateForm()} type="submit">
           Login
         </Button>
       </form>
+      </Grid.Column>
+    </Grid>
     </div>
   );
 }
