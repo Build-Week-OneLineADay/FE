@@ -31,7 +31,7 @@ export default function Login(props) {
         localStorage.setItem('token', res.data.token);
         props.history.push('/dashboard');
       })
-      .catch(err => console.log(err.response));
+      .catch(err => console.log("Please try again", err.response));
     };
     
 	return (
