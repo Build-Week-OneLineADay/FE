@@ -27,7 +27,7 @@ export default function Login(props) {
       <form onSubmit={handleSubmit}>
         <Form controlId="email" bsSize="large">
 
-          <Label>Email</Label>
+          <h2>Email</h2>
 
           <Form
             autoFocus
@@ -39,7 +39,7 @@ export default function Login(props) {
         </Form>
         <Form controlId="password" bsSize="large">
 
-          <Label>Password</Label>
+          <h2>Password</h2>
 
           <Form
             value={password}
