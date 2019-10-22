@@ -53,6 +53,7 @@ class EditEntry extends React.Component {
      Edit Your Entry
      </Header>
         <Form size='large' onSubmit={this.register}>
+        <Form.Input fluid type="text"   title="title" placeholder="New Title" onChange={this.handleChange} />
         <Form.Input fluid type="text"   text_entry="text_entry" placeholder="One Line A Day" onChange={this.handleChange}  />
          <Button color='teal' fluid size='large'>Save</Button>
         </Form>
