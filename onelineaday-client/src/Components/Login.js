@@ -1,14 +1,9 @@
-import React, {useState} from "react";
-import ReactDOM from "react-dom";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  useParams
-} from "react-router-dom";
-// import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
+
+import React, { useState } from "react";
+import {Form, Button, Grid, Header} from "semantic-ui-react";
+
 import "./Login.css";
-import {Form, Button} from "semantic-ui-react";
+
 
 export default function Login(props) {
   const [email, setEmail] = useState("");
@@ -24,9 +19,16 @@ export default function Login(props) {
 
   return (
     <div className="Login">
+        <Grid textAlign='center' style={{ height: '100vh' }} verticalAlign='middle'>
+        <Grid.Column style={{ maxWidth: 450 }}>
+        <Header as='h2' color='teal' textAlign='center'>
+     Get Logged In
+        </Header>
       <form onSubmit={handleSubmit}>
         <Form controlId="email" bsSize="large">
-          {/* <ControlLabel>Email</ControlLabel> */}
+
+          <h2>Email</h2>
+
           <Form
             autoFocus
             type="email"
@@ -36,7 +38,9 @@ export default function Login(props) {
           />
         </Form>
         <Form controlId="password" bsSize="large">
-          {/* <ControlLabel>Password</ControlLabel> */}
+
+          <h2>Password</h2>
+
           <Form
             value={password}
             placeholder="Enter Your Password"
@@ -44,10 +48,14 @@ export default function Login(props) {
             type="password"
           />
         </Form>
-        <Button block bsSize="large" disabled={!validateForm()} type="submit">
+
+        <Button color="teal" block bsSize="large" disabled={!validateForm()} type="submit">
+
           Login
         </Button>
       </form>
+      </Grid.Column>
+    </Grid>
     </div>
   );
 }
