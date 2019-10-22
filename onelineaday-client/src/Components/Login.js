@@ -1,6 +1,9 @@
+
 import React, { useState } from "react";
 import {Form, Button, Grid, Header} from "semantic-ui-react";
+
 import "./Login.css";
+import {Form, Button} from "semantic-ui-react";
 
 export default function Login(props) {
   const [email, setEmail] = useState("");
@@ -23,7 +26,9 @@ export default function Login(props) {
         </Header>
       <form onSubmit={handleSubmit}>
         <Form controlId="email" bsSize="large">
+
           <Label>Email</Label>
+
           <Form
             autoFocus
             type="email"
@@ -33,7 +38,9 @@ export default function Login(props) {
           />
         </Form>
         <Form controlId="password" bsSize="large">
+
           <Label>Password</Label>
+
           <Form
             value={password}
             placeholder="Enter Your Password"
@@ -41,7 +48,9 @@ export default function Login(props) {
             type="password"
           />
         </Form>
+
         <Button color="teal" block bsSize="large" disabled={!validateForm()} type="submit">
+
           Login
         </Button>
       </form>
