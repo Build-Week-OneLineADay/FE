@@ -32,7 +32,7 @@ export default function Login(props) {
         localStorage.setItem('user_id', res.data.user.id);
         props.history.push('/dashboard');
       })
-      .catch(err => console.log(err.response));
+      .catch(err => console.log("Please try again", err.response));
     };
     
 	return (
