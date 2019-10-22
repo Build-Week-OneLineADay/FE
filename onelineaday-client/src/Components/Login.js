@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import {Form, Button, Grid, Header} from "semantic-ui-react";
 
 import "./Login.css";
-import {Form, Button} from "semantic-ui-react";
+
 
 export default function Login(props) {
   const [email, setEmail] = useState("");
