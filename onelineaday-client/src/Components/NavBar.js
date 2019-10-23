@@ -1,5 +1,5 @@
 import React from 'react';
-import SearchForm from './SearchForm'
+// import SearchForm from './SearchForm'
 import { Button } from "semantic-ui-react";
 
 import { useDarkMode } from '../hooks/useDarkMode';
@@ -24,7 +24,7 @@ const Navbar = () => {
         <Link to='/dashboard'>One Line A Day</Link>
       </h1>
      <div className='logout-container'>
-        <SearchForm />
+        {/* <SearchForm /> */}
         <div className="dark-mode__toggle" onClick={toggleMode}>
           <div
             onClick={toggleMode}

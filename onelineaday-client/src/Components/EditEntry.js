@@ -86,8 +86,10 @@ componentDidMount() {
               <Form.Input fluid type="text" name='text_entry' value={this.state.entry.text_entry}
                           onChange={this.handleChange}/>
                 <div className='Entry-Buttons'>
+
                 <Button color='teal' fluid size='large' onClick={this.onSave}>Save</Button>
                 <Button color='red' onClick={this.onDelete}>Delete Entry</Button>
+
                 </div>
               </Form>
             
