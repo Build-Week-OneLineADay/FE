@@ -39,14 +39,20 @@ function AddEntry (props) {
   return (
     <div>
       <h2 className='SubTitle'>Add An Entry</h2>
+
       <Form onSubmit={handleSubmit} className='EntryForm'>
+
         <TextArea style={{ maxWidth: 400 }}
           type="text"
           name="entry"
           placeholder ="Enter your daily lines here"
           onChange={handleChanges}
         />
+        <div className='add-btn'>
         <Button size='medium' color='teal'>Add New Entry</Button>   
+
+        </div>
+
       </Form>
     </div>
   );
