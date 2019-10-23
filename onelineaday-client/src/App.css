@@ -175,3 +175,9 @@ button {
   flex-direction: column;
   flex-wrap: wrap;
 }
+
+.EntryForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

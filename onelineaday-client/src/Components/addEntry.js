@@ -2,45 +2,44 @@ import React, { useState, useEffect }from 'react';
 import axiosWithAuth from "../utils/axiosWithAuth";
 import { Form, TextArea, Button } from 'semantic-ui-react'
 
-
 function AddEntry (props) {
-const [entry, setEntry] = useState([]);
+  const [entry, setEntry] = useState([]);
 
-useEffect(() => {
+  useEffect(() => {
 
-}, )
+  }, )
 
-
-
-function handleChanges(e) {
+  function handleChanges(e) {
     setEntry({...entry, [e.target.name]: e.target.value})
   };
   
   function handleSubmit(e) {
     e.preventDefault();
+    e.target.reset();
     const id = localStorage.getItem('user_id');
     
-    const finalEntry = new Object;
-
+    // eslint-disable-next-line
+    const finalEntry = (new Object ());
     finalEntry.title = ' ';
     finalEntry.text_entry = entry.entry;
     
-       axiosWithAuth()
-       .post(`/api/journal/users/${id}/posts`, finalEntry)
-       .then(res => {
-           setEntry(res.data.posts);
-           props.loadPosts();
-         })
-         .catch(err => {
-           console.log(err)
-       });
+    axiosWithAuth()
+    .post(`/api/journal/users/${id}/posts`, finalEntry)
+    .then(res => {
+      setEntry(res.data.posts);
+      props.loadPosts();
+    })
+
+    .catch(err => {
+      console.log(err)
+    });
+
   }
 
-
   return (
-    <div >
+    <div>
       <h2 className='SubTitle'>Add An Entry</h2>
-      <Form onSubmit={handleSubmit}>
+      <Form onSubmit={handleSubmit} className='EntryForm'>
         <TextArea style={{ maxWidth: 400 }}
           type="text"
           name="entry"
@@ -48,7 +47,6 @@ function handleChanges(e) {
           onChange={handleChanges}
         />
         <Button size='medium' color='teal'>Add New Entry</Button>   
-
       </Form>
     </div>
   );
