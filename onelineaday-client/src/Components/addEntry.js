@@ -18,8 +18,10 @@ function AddEntry (props) {
     e.target.reset();
     const id = localStorage.getItem('user_id');
     
-    // eslint-disable-next-line
-    const finalEntry = (new Object ());
+
+    const finalEntry = {};
+
+
     finalEntry.title = ' ';
     finalEntry.text_entry = entry.entry;
     

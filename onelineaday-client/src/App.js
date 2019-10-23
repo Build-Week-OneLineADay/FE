@@ -16,7 +16,7 @@ function App() {
       <div className="App">
         <Route path='/Register' component={RegForm} />
         <Route exact path='/' component={Login}/>
-        <Route path='/EditEntry' component={EditEntry} />
+        <Route path='/EditEntry/:entryId' component={EditEntry}/>
         <ProtectedRoute exact path='/dashboard' component={Dashboard} />
       </div>
     </Router>
