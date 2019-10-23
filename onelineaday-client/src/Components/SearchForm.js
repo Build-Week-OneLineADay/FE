@@ -1,16 +1,17 @@
 import React, { useState } from "react";
 import EntryCard from './entryCard';
-import axios from 'axios'
+import axiosWithAuth from '../utils/axiosWithAuth'
 import search from '../search.svg';
 
 export default function SearchForm({ onSearch }) {
   const [text_entry, setEntry] = useState('');
   const [searchPosts, setSearchPosts] = useState([]);
+  const id = localStorage.getItem('user_id');
 
   const onNewSearch = (str) => {
-    axios
-    .get(`https://backend-onelineaday.herokuapp.com/api/journal/posts?text_entry=${str}`)
-    .then(res => setSearchPosts(res.data.posts.text_entry));
+    axiosWithAuth()
+    .get(`/api/journal/users/${id}/posts/?text_entry=${str}`)
+    .then(res => setSearchPosts(res.data.posts));
   }
 
   const handleInputChange = (e) => {
@@ -21,21 +22,22 @@ export default function SearchForm({ onSearch }) {
       <form onSubmit={(event) => {
         event.preventDefault();
         onNewSearch(text_entry)
-        }}>
-        <div className='search-div' >
-          <input  
-            className='search'
-            onChange={handleInputChange}
-            placeholder="Search Entry"
-            value={text_entry}
-            text_entry="text_entry"
-          />
-          <img src={search} alt='' className='search-img'  />
-        </div>
+      }}>
+
+      <div className='search-div' >
+        <input  
+          className='search'
+          onChange={handleInputChange}
+          placeholder="Search Entry"
+          value={text_entry}
+          text_entry="text_entry"
+        />
+        <img src={search} alt='' className='search-img' onClick={onNewSearch} />
+      </div>
       </form>
 
       <div className="grid-view">
-        {searchPosts.map(res => <EntryCard text_entry={res} />)}
+        {searchPosts.map(res => <EntryCard posts={res} />)}
       </div>    
     </section>
   );

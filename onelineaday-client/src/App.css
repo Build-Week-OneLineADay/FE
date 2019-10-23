@@ -34,7 +34,6 @@ a.signOutButton {
   font-size: 1.2rem;
   display: flex;
   justify-content: center;
-  align-items: center;
   flex-wrap: wrap;
   padding: 10px 40px;
   opacity: 0.9;
@@ -164,6 +163,7 @@ margin: 20px;
 }
 
 .search-div {
+  background-color: white;
   display: flex;
   align-items: center;
   border: 1px solid #00b5ad;
@@ -182,6 +182,13 @@ margin: 20px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+}
+
+
+.EntryForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 @media all and (min-width: 480px) {
@@ -204,3 +211,4 @@ margin: 20px;
   }
 
 };
+
