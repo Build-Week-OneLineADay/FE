@@ -34,7 +34,6 @@ a.signOutButton {
   font-size: 1.2rem;
   display: flex;
   justify-content: center;
-  align-items: center;
   flex-wrap: wrap;
   padding: 10px 40px;
   opacity: 0.9;
