@@ -20,18 +20,20 @@ export default function SearchForm({ onSearch }) {
     <section>
       <form onSubmit={(event) => {
         event.preventDefault();
+        event.target.reset();
         onNewSearch(text_entry)
-        }}>
-        <div className='search-div' >
-          <input  
-            className='search'
-            onChange={handleInputChange}
-            placeholder="Search Entry"
-            value={text_entry}
-            text_entry="text_entry"
-          />
-          <img src={search} alt='' className='search-img'  />
-        </div>
+      }}>
+
+      <div className='search-div' >
+        <input  
+          className='search'
+          onChange={handleInputChange}
+          placeholder="Search Entry"
+          value={text_entry}
+          text_entry="text_entry"
+        />
+        <img src={search} alt='' className='search-img' onClick={onNewSearch} />
+      </div>
       </form>
 
       <div className="grid-view">
