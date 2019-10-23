@@ -40,15 +40,16 @@ function handleChanges(e) {
   return (
     <div >
       <h2 className='SubTitle'>Add An Entry</h2>
-      <Form onSubmit={handleSubmit}>
+      <Form className="entry-box" onSubmit={handleSubmit}>
         <TextArea style={{ maxWidth: 400 }}
           type="text"
           name="entry"
           placeholder ="Enter your daily lines here"
           onChange={handleChanges}
         />
+        <div className='add-btn'>
         <Button size='medium' color='teal'>Add New Entry</Button>   
-
+        </div>
       </Form>
     </div>
   );

@@ -57,7 +57,7 @@ class EditEntry extends React.Component {
                 <Form.Input fluid type="text"   text_entry="text_entry" placeholder="One Line A Day" onChange={this.handleChange}  />
                 <div className='Entry-Buttons'>
                   <Button color='teal' fluid size='large'>Save</Button>
-                  <Button color='red'>Delete Entry</Button>
+                  <Button className="delete-btn" color='red'>Delete Entry</Button>
                 </div>
               </Form>
             
