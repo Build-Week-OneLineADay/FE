@@ -170,3 +170,8 @@ button {
   height: 15px;
 }
 
+.Entry-Buttons {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}

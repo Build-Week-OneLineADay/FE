@@ -6,7 +6,7 @@ const EntryCard = ({ post }) => {
     const {text_entry, created_at} = post
 
     return (
-       <Link to={`/api/journal/posts${post.id}`} className="LinkWrapper">
+       <Link to={'/EditEntry'} className="LinkWrapper">
             <Card 
                 meta={`Date: ${created_at}`}
                 description={text_entry}  
