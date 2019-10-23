@@ -20,7 +20,7 @@ function handleChanges(e) {
     e.preventDefault();
     const id = localStorage.getItem('user_id');
     
-    const finalEntry = new Object;
+    const finalEntry = {};
 
     finalEntry.title = ' ';
     finalEntry.text_entry = entry.entry;
