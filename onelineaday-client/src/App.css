@@ -183,3 +183,24 @@ margin: 20px;
   flex-direction: column;
   flex-wrap: wrap;
 }
+
+@media all and (min-width: 480px) {
+  .Login {
+    padding: 60px 0;
+  }
+
+  .Login form {
+    margin: 0 auto;
+    max-width: 320px;
+  }
+
+  .Dashboard {
+    padding: 60px 0;
+  }
+
+  .Dashboard form {
+    margin: 0 auto;
+    max-width: 320px;
+  }
+
+};
