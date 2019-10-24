@@ -7,6 +7,7 @@
     We chose Neflify beacuse of it's ability to automatically deploy to the master branch.
 
 ## Dependencies
+```
   -Styling
     Styled-Components- Used for basic styling
     Semantic UI -Used for advanced styling 
@@ -15,7 +16,7 @@
       ReactRouterDom
       Hooks
       Axios
-
+```
 ## Functionality
     -Add Entry
     -Ability to Edit or Delte Entry
