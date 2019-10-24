@@ -43,23 +43,23 @@ a.signOutButton {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  width: 51%;
   justify-content: space-between;
-  width: 550px;
+  
 }
 
 .navbar {
-  align-items: center;
+  
   margin-bottom: 80px;
+  margin: 0 auto;
   border-bottom: 1px solid rgb(221, 221, 221);
   display: flex;
   flex-wrap: wrap;
-  height: 70px;
-  align-items: center;
+  height: auto;
   justify-content: space-between;
-  padding: 0 3%;
-  -webkit-box-shadow: 0px 2px 15px -8px rgba(0, 0, 0, 0.42);
-  -moz-box-shadow: 0px 2px 15px -8px rgba(0, 0, 0, 0.42);
-  box-shadow: 0px 2px 15px -8px rgba(0, 0, 0, 0.42);
+  -webkit-box-shadow: 0px 2px px -8px rgba(0, 0, 0, 0.42);
+  -moz-box-shadow: 0px 2px 5px -8px rgba(0, 0, 0, 0.42);
+  box-shadow: 0px 5px 10px -8px rgba(0, 0, 0, 0.42);
 }
 
 .dark-mode__toggle {
@@ -191,7 +191,7 @@ margin: 20px;
   align-items: center;
 }
 
-@media all and (min-width: 480px) {
+@media all and (max-width: 1500px) {
   .Login {
     padding: 60px 0;
   }
@@ -209,6 +209,28 @@ margin: 20px;
     margin: 0 auto;
     max-width: 320px;
   }
+
+  .navbar {
+    align-items: center;
+    align-content: center;
+    border-bottom: none;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 15px 0px 0px 0px;
+  }
+
+  .logout-container {
+    
+    justify-content: space-around;
+    padding: 0px 0px 15px 0px;
+  }
+
+  .logout-container .lightswitch_toggle {
+    padding: 0px 0px 15px 0px;
+  }
+
 
 };
 

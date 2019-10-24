@@ -25,11 +25,14 @@ const Navbar = () => {
       </h1>
      <div className='logout-container'>
         {/* <SearchForm /> */}
+        <div className='lightswitch_toggle'>
+        <h5>Light Switch</h5>
         <div className="dark-mode__toggle" onClick={toggleMode}>
           <div
             onClick={toggleMode}
             className={darkMode ? 'toggle toggled' : 'toggle'}
           />
+          </div>
         </div>
         <Button onClick={handleSignOut} color='teal'>
           <Link to='/' className='signOutButton'> Sign Out </Link>
