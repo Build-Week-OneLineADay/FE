@@ -7,11 +7,10 @@
     We chose Neflify beacuse of it's ability to automatically deploy to the master branch.
 
 ## Dependencies
-  Styling
+  -Styling
     Styled-Components- Used for basic styling
-    Semantic UI -Used for advanced styling
-   
-   State Managment
+    Semantic UI -Used for advanced styling 
+ -State Managment
       Redux
       ReactRouterDom
       Hooks
