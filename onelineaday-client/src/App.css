@@ -2,6 +2,7 @@
 
 .App {
   text-align: center;
+  overflow: hidden;
 }
 
 a {
@@ -49,7 +50,7 @@ a.signOutButton {
 }
 
 .navbar {
-  
+  padding: 20px;
   margin-bottom: 80px;
   margin: 0 auto;
   border-bottom: 1px solid rgb(221, 221, 221);
@@ -117,7 +118,7 @@ button.ui.red.button.delete-btn {
 
 .ui.card {
   margin: 20px;
-  width: 350px;
+  /* width: 350px; */
   text-align: left;
   height: 100%;
   transition: 600ms;  
@@ -191,7 +192,7 @@ margin: 20px;
   align-items: center;
 }
 
-@media all and (max-width: 1500px) {
+@media all and (min-width: 200px) {
   .Login {
     padding: 60px 0;
   }
@@ -214,23 +215,26 @@ margin: 20px;
     align-items: center;
     align-content: center;
     border-bottom: none;
-    flex-direction: column;
-    flex-wrap: nowrap;
     justify-content: space-between;
     margin: 0 auto;
-    padding: 15px 0px 0px 0px;
+    padding: 15px;
   }
 
-  .logout-container {
+  /* .logout-container {
     
     justify-content: space-around;
     padding: 0px 0px 15px 0px;
-  }
+  } */
 
-  .logout-container .lightswitch_toggle {
+  /* .logout-container .lightswitch_toggle {
     padding: 0px 0px 15px 0px;
-  }
+  } */
 
 
 };
 
+/* .lightSwitch_toggle {
+  display: flex;
+  align-items: center;
+  width: 50px;
+} */

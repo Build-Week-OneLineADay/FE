@@ -1,5 +1,4 @@
 import React from 'react';
-// import SearchForm from './SearchForm'
 import { Button } from "semantic-ui-react";
 
 import { useDarkMode } from '../hooks/useDarkMode';
@@ -23,21 +22,20 @@ const Navbar = () => {
       <h1>
         <Link to='/dashboard'>One Line A Day</Link>
       </h1>
-     <div className='logout-container'>
-        {/* <SearchForm /> */}
-        <div className='lightswitch_toggle'>
+    
+      <div className='lightSwitch_toggle'>
         <h5>Light Switch</h5>
         <div className="dark-mode__toggle" onClick={toggleMode}>
           <div
             onClick={toggleMode}
             className={darkMode ? 'toggle toggled' : 'toggle'}
           />
-          </div>
         </div>
-        <Button onClick={handleSignOut} color='teal'>
-          <Link to='/' className='signOutButton'> Sign Out </Link>
-        </Button>
-     </div>
+      </div>
+      <Button onClick={handleSignOut} color='teal'>
+        <Link to='/' className='signOutButton'> Sign Out </Link>
+      </Button>
+     
     </nav>
   );
 };
