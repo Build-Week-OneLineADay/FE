@@ -3,8 +3,10 @@
 
 
 ## Deployed with Netlify
+
     - 1lineadayapp.netlify.com
-    - We chose Neflify beacuse of it's ability to automatically deploy to the master branch.
+    
+     - We chose Neflify beacuse of it's ability to automatically deploy to the master branch.
 
 ## Dependencies
 ```
