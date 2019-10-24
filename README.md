@@ -1,20 +1,28 @@
 ## Package Manager
     Yarn
 
+
+##Deployed with Netlify
+    1lineadayapp.netlify.com
+
 ## Dependencies
-  **Styling**
+  Styling
     Styled-Components
        - Used for basic styling
     Semantic UI
       - Used for advanced styling
    
-   **State Managment**
+   State Managment
      - Redux
      - ReactRouterDom
      - Hooks
      - Axios
-   
- 
+
+## Functionality
+    -Add Entry
+    -Ability to Edit or Delte Entry
+    -Ability to toggle on or off dark mode
+    
  ## Future Releases
     -Add the ability to add pictures.
     -Add the ability to search by date or text.
