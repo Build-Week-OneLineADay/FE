@@ -3,9 +3,9 @@
 
 ## Dependencies
   **Styling**
-    -Styled-Components
+    Styled-Components
        -Used for basic styling
-    -Semantic UI
+    Semantic UI
       -Used for advanced styling
    
    **State Managment**
