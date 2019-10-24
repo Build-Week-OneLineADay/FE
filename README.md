@@ -11,8 +11,10 @@
 ## Dependencies
 ```
  Styling
-    Styled-Components- Used for basic styling
-    Semantic UI -Used for advanced styling 
+    Styled-Components
+        Used for basic styling
+    Semantic UI
+        Used for advanced styling 
  State Managment
       Redux
       ReactRouterDom
